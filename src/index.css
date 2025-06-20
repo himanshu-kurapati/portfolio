@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --primary: #7f5af0;
+  --secondary: #2cb67d;
+  --accent: #ffc107;
+  --dark: #0d0e12;
+  --dark-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+}
+
+/* CodyHouse Stacking Cards CSS */
+.stack-cards {
+  --stack-cards-gap: 0.75rem;
+  --stack-cards-item-ratio: 2/1;
+}
+
+@media (min-width: 64rem) {
+  .stack-cards {
+    --stack-cards-gap: 1.125rem;
+  }
+}
+
+.stack-cards__item {
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1.25rem; /* 20px - equivalent to top-5 */
+  height: 0;
+  padding-bottom: calc(100% / (var(--stack-cards-item-ratio)));
+  transform-origin: center top;
+}
+
+@media (min-width: 64rem) {
+  .stack-cards__item {
+    top: 2rem; /* 32px - equivalent to top-8 on large screens */
+  }
+}
+
+.stack-cards__item > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ensure proper stacking context */
+.stack-cards {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override any conflicting Tailwind styles */
+.stack-cards__item.js-stack-cards__item {
+  position: sticky !important;
+  top: 1.25rem !important;
+}
+
+@media (min-width: 64rem) {
+  .stack-cards__item.js-stack-cards__item {
+    top: 2rem !important;
+}
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: 'Quantico', 'Pixelify Sans', monospace, sans-serif !important;
+}
+
+body {
+  font-family: 'Quantico', 'Pixelify Sans', monospace, sans-serif !important;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: #010101;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* cursor: none; */ /* Restored default cursor */
+}
+
+/* Force new fonts on all elements with higher specificity */
+*, *::before, *::after {
+  font-family: 'Quantico', 'Pixelify Sans', monospace, sans-serif !important;
+}
+
+/* Override all possible text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
+  font-family: 'Quantico', 'Pixelify Sans', monospace, sans-serif !important;
+}
+
+@layer base {
+  /* Force font family on all elements */
+  * {
+    font-family: 'Quantico', 'Pixelify Sans', monospace, sans-serif !important;
+  }
+
+  .glass-card {
+    @apply bg-[#16171d]/60 backdrop-blur-md border border-white/5 rounded-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-in-out;
+}
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(127, 90, 240, 0.3);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+}
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+}
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+  .gradient-stroke-text {
+    -webkit-text-stroke: 2px transparent;
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+} 
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d48cc;
+} 
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+}
+
+/* Hide Spline watermark */
+#spline-watermark,
+[data-spline-watermark],
+.spline-watermark,
+canvas + div[style*="position: absolute"][style*="bottom"],
+canvas + div[style*="position: fixed"][style*="bottom"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+} 
+
+/* Additional Spline watermark selectors */
+div[style*="font-family"][style*="bottom: 10px"],
+div[style*="position: absolute"][style*="bottom: 10px"][style*="right: 10px"],
+div[style*="position: fixed"][style*="bottom: 10px"][style*="right: 10px"] {
+  display: none !important;
+}
+
+/* Ensure Spline scenes don't get clipped - using Card component structure */
+.spline-robot-container {
+  overflow: visible !important;
+} 
+
+.spline-robot-container canvas,
+.spline-robot-container > div {
+  overflow: visible !important;
+  clip: none !important;
+  clip-path: none !important;
+} 
+
+/* Spotlight animation */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlight 2s ease .75s 1 forwards;
+} 
+
+/* Loading spinner */
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7f5af0;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+/* Dark Theme Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom CSS Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  }
+  
+.hover-glow {
+  transition: all 0.3s ease;
+  }
+  
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.5);
+  transform: translateY(-2px);
+} 
+
+/* 3D Flip Card Utilities */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  }
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Remove the CSS cursor rules for now since they're causing webpack issues */
+/* We'll handle cursors via inline styles in the component */ 
