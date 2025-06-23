@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://himanshu-kurapati.github.io/portfolio",
+  "homepage": ".",
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@radix-ui/react-slot": "^1.2.3",
