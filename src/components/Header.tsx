@@ -44,7 +44,7 @@ const Header: React.FC = () => {
     return (
         <>
             <motion.header
-                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'pt-4' : ''
+                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'pt-4' : 'pt-6 mb-8'
                     }`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -52,16 +52,17 @@ const Header: React.FC = () => {
             >
                 <motion.div
                     className={`transition-all duration-500 ${scrolled
-                            ? 'max-w-4xl mx-auto px-6 bg-zinc-900/95 backdrop-blur-xl shadow-2xl border border-white/10 rounded-full'
-                            : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent'
+                        ? 'max-w-4xl mx-auto px-6 bg-zinc-900/95 backdrop-blur-xl shadow-2xl border border-white/10 rounded-full'
+                        : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent'
                         }`}
                     layout
                 >
                     <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? 'h-14' : 'h-16'
                         }`}>
                         {/* Logo */}
-                        <motion.div
+                        <motion.button
                             className="flex items-center space-x-3"
+                            onClick={() => navigate('/')}
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.2 }}
                         >
@@ -73,7 +74,7 @@ const Header: React.FC = () => {
                                 }`}>
                                 Himanshu Kurapati
                             </span>
-                        </motion.div>
+                        </motion.button>
 
                         {/* Desktop Navigation */}
                         <nav className="hidden md:flex items-center space-x-6">
@@ -103,16 +104,15 @@ const Header: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.8 }}
                         >
-                            <motion.a
-                                href="/resume.pdf"
-                                download="Himanshu_Kurapati_Resume.pdf"
+                            <motion.button
+                                onClick={() => navigate('/resume')}
                                 className={`bg-white text-black hover:bg-gray-100 shadow-lg font-medium rounded-full transition-all duration-300 ${scrolled ? 'px-4 py-2 text-sm' : 'px-6 py-2.5'
                                     }`}
                                 whileHover={{ scale: 1.05, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                {scrolled ? 'Resume' : 'Download Resume'}
-                            </motion.a>
+                                {scrolled ? 'Resume' : 'View Resume'}
+                            </motion.button>
                         </motion.div>
 
                         {/* Mobile Menu Button */}
@@ -181,14 +181,15 @@ const Header: React.FC = () => {
                                     className="pt-4 border-t border-white/10"
                                     variants={fadeUp}
                                 >
-                                    <a
-                                        href="/resume.pdf"
-                                        download="Himanshu_Kurapati_Resume.pdf"
+                                    <button
+                                        onClick={() => {
+                                            navigate('/resume');
+                                            setIsOpen(false);
+                                        }}
                                         className="block w-full text-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-100 transition-colors"
-                                        onClick={() => setIsOpen(false)}
                                     >
-                                        Download Resume
-                                    </a>
+                                        View Resume
+                                    </button>
                                 </motion.div>
                             </motion.nav>
                         </motion.div>
