@@ -109,24 +109,32 @@ const Typewriter = ({
     ])
 
     return (
-        <div className={`inline whitespace-pre-wrap tracking-tight ${className}`}>
-            <span>{displayText}</span>
-            {showCursor && (
-                <motion.span
-                    variants={cursorAnimationVariants}
-                    className={cn(
-                        cursorClassName,
-                        hideCursorOnType &&
-                            (currentIndex < texts[currentTextIndex].length || isDeleting)
-                            ? "hidden"
-                            : ""
-                    )}
-                    initial="initial"
-                    animate="animate"
-                >
-                    {cursorChar}
-                </motion.span>
-            )}
+        <div className={`relative tracking-tight ${className}`} style={{
+            minHeight: 'calc(2 * 1.2em)',
+            lineHeight: '1.2',
+            display: 'flex',
+            alignItems: 'flex-start'
+        }}>
+            <span className="inline">
+                {displayText}
+                {showCursor && (
+                    <motion.span
+                        variants={cursorAnimationVariants}
+                        className={cn(
+                            cursorClassName,
+                            "inline align-baseline",
+                            hideCursorOnType &&
+                                (currentIndex < texts[currentTextIndex].length || isDeleting)
+                                ? "hidden"
+                                : ""
+                        )}
+                        initial="initial"
+                        animate="animate"
+                    >
+                        {cursorChar}
+                    </motion.span>
+                )}
+            </span>
         </div>
     )
 }

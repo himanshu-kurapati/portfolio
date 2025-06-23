@@ -1,0 +1,109 @@
+{
+    "projects": [
+        {
+            "id": "jobsculptor",
+            "name": "Job Sculptor: AI Job Tracker",
+            "icon": "/images/apps/jobsculptor/icon.png",
+            "subtitle": "Apply, track & nail interviews",
+            "longDescription": "Land your next role faster. Job Sculptor organizes every application, writes AI-powered cover letters, and reminds you of deadlines so you never miss an interview.\nWhy job seekers love Job Sculptor\n• One inbox for every opportunity – capture role, company, salary, status, notes & more in seconds.\n• Smart timeline – visual pipeline shows where you stand today and what’s next.\n• Chat with Jobsy – your AI buddy that already “knows” your profile & applications, so you can ask anything “What skills am I missing for this role?”, “Draft a follow-up email.”, generating tailored cover letters, interview questions, recruiter emails with one tap.\n• Alignment Score – instant gauge of how well your profile matches each job and which skills to improve.\n• One-Tap Calendar Add – drop interviews into your device calendar and get 48 h / 24 h / 1 h push reminders—no extra permissions needed.\n• Tailored Docs on Tap – save the exact resume & cover-letter versions you sent for each application and reopen them any time.\n• Secure & private – Sign in with Apple, Google or email; all data encrypted at rest.\n• Free to start – track 10 applications & try every AI feature before you subscribe.\nCall to Action\nStop juggling spreadsheets and 🔔 reminders. Download Job Sculptor today and sculpt the career you deserve!",
+            "version": "1.1",
+            "category": "Productivity",
+            "technologies": [
+                "React Native Expo",
+                "Supabase",
+                "OpenAI API",
+                "N8N",
+                "Tailwind CSS"
+            ],
+            "screenshots": [
+                "/images/apps/jobsculptor/01.png",
+                "/images/apps/jobsculptor/02.png",
+                "/images/apps/jobsculptor/03.png",
+                "/images/apps/jobsculptor/04.png",
+                "/images/apps/jobsculptor/05.png",
+                "/images/apps/jobsculptor/06.png",
+                "/images/apps/jobsculptor/07.png"
+            ],
+            "downloads": "Just launched",
+            "rating": 0,
+            "reviews": "No reviews yet",
+            "playStoreUrl": "https://play.google.com/store/apps/details?id=com.himanshukurapati.jobsculptor",
+            "appStoreUrl": "https://apps.apple.com/in/app/job-sculptor-ai-job-tracker/id6746664002",
+            "websiteUrl": "",
+            "releaseDate": "2025-06-17",
+            "lastUpdated": "2025-06-18",
+            "minAndroidVersion": "",
+            "minIOSVersion": "",
+            "status": "active"
+        },
+        {
+            "id": "tesla",
+            "name": "Tesla Off-Road",
+            "icon": "/images/apps/tesla/icon.png",
+            "subtitle": "Electric Vehicle Experience",
+            "longDescription": "Tesla cars with instant torque and speed\nWhat if you can Off-Road.......\n\nWhat do you need for Off-Roading?\nBig Tyres    &     High Suspension\n\nNow with all these features, you can ride on rocks and pass through any obstacles easily\n\nCruise the night through all obstacles",
+            "version": "1.5.2",
+            "category": "Simulation",
+            "technologies": [
+                "Unity",
+                "Blender",
+                "Illustrator"
+            ],
+            "screenshots": [
+                "/images/apps/tesla/1.png",
+                "/images/apps/tesla/2.png",
+                "/images/apps/tesla/3.jpg",
+                "/images/apps/tesla/4.jpg",
+                "/images/apps/tesla/5.jpg",
+                "/images/apps/tesla/6.jpg",
+                "/images/apps/tesla/7.jpg"
+            ],
+            "downloads": "100k+",
+            "rating": 3.74,
+            "reviews": 422,
+            "playStoreUrl": null,
+            "appStoreUrl": null,
+            "websiteUrl": null,
+            "releaseDate": "2020-08-1",
+            "lastUpdated": "2021-05-17",
+            "fileSize": null,
+            "minAndroidVersion": "",
+            "minIOSVersion": "",
+            "status": "inactive"
+        },
+        {
+            "id": "xblade",
+            "name": "X-Blade",
+            "icon": "/images/apps/xblade/icon.png",
+            "subtitle": "Cross obstacles and save Julia",
+            "longDescription": "Once upon a time, there were two friends, John and Julia. One day they were going for a walk. In the middle of the walk, Julia saw a flower and wanted it. So John plucked it and gave it to Julia. That flower was a mysterious flower and made Julia disappear.\n\nNow help John and his friends to find Julia.",
+            "version": "1.2",
+            "category": "Action",
+            "technologies": [
+                "Unity",
+                "Blender",
+                "Maximo",
+                "Illustrator"
+            ],
+            "screenshots": [
+                "/images/apps/xblade/1.png",
+                "/images/apps/xblade/2.png",
+                "/images/apps/xblade/3.png",
+                "/images/apps/xblade/4.png",
+                "/images/apps/xblade/5.png"
+            ],
+            "downloads": "5k+",
+            "rating": 5.0,
+            "reviews": 22,
+            "playStoreUrl": null,
+            "appStoreUrl": null,
+            "websiteUrl": null,
+            "releaseDate": "2021-02-15",
+            "lastUpdated": "2021-02-22",
+            "fileSize": null,
+            "minAndroidVersion": "",
+            "minIOSVersion": "",
+            "status": "inactive"
+        }
+    ]
+}

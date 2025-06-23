@@ -205,12 +205,12 @@ const Stack: React.FC = () => {
                             </div>
 
                             {/* Chrome-style Tabs */}
-                            <div className="flex">
+                            <div className="flex overflow-x-auto scrollbar-hide">
                                 {tabs.map((tab) => (
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveTabId(tab.id)}
-                                        className={`relative px-6 py-3 text-sm font-mono transition-all duration-200 ${activeTabId === tab.id
+                                        className={`relative px-3 md:px-6 py-3 text-xs md:text-sm font-mono transition-all duration-200 whitespace-nowrap flex-shrink-0 ${activeTabId === tab.id
                                             ? 'bg-gray-900 text-white border-t-2 border-primary'
                                             : 'bg-gray-700 text-gray-300 hover:bg-gray-650 hover:text-white'
                                             }`}
@@ -266,11 +266,22 @@ const Stack: React.FC = () => {
                                         onClick={() => runQuery(activeTab.id)}
                                         disabled={activeTab.status === 'running'}
                                         className={`px-4 py-2 rounded text-sm font-medium transition-all duration-200 ${activeTab.status === 'running'
-                                            ? 'bg-yellow-500/20 text-yellow-400 cursor-not-allowed'
+                                            ? 'bg-yellow-500/20 text-yellow-400 cursor-not-allowed border border-yellow-500/30'
                                             : activeTab.status === 'completed'
-                                                ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30'
-                                                : 'bg-primary/20 text-primary hover:bg-primary/30'
+                                                ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30 border border-green-500/30'
+                                                : 'bg-primary/20 text-primary hover:bg-primary/30 border-2'
                                             }`}
+                                        style={activeTab.status === 'idle' ? {
+                                            borderColor: 'var(--primary-color, #3b82f6)',
+                                        } : {}}
+                                        animate={activeTab.status === 'idle' ? {
+                                            borderColor: ['rgba(59, 130, 246, 0.3)', 'rgba(59, 130, 246, 0.8)', 'rgba(59, 130, 246, 0.3)'],
+                                        } : {}}
+                                        transition={{
+                                            duration: 2,
+                                            repeat: Infinity,
+                                            ease: "easeInOut"
+                                        }}
                                         whileHover={{ scale: activeTab.status !== 'running' ? 1.05 : 1 }}
                                         whileTap={{ scale: activeTab.status !== 'running' ? 0.95 : 1 }}
                                     >
@@ -307,7 +318,7 @@ const Stack: React.FC = () => {
                             </div>
 
                             {/* Table Content */}
-                            <div className="overflow-x-auto">
+                            <div className="overflow-x-auto scrollbar-hide">
                                 <table className="w-full">
                                     <thead className="bg-gray-800/50">
                                         <tr>

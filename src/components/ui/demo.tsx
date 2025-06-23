@@ -25,10 +25,9 @@ export function SplineSceneBasic() {
 
                 {/* Right content */}
                 <div className="relative w-full h-screen overflow-hidden bg-red-500">
-                    <SplineScene
-                        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                        className="object-cover w-full h-full"
-                    />
+                    <div className="object-cover w-full h-full">
+                        <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
+                    </div>
                     <div className="absolute inset-0 pointer-events-none mask-x-from-5% mask-x-to-95% bg-black" />
                 </div>
             </div>
@@ -81,23 +80,35 @@ export function SplineRobot() {
 
             {/* Robot container */}
             <div className="w-full h-full relative">
-                <SplineScene
-                    scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                    className="w-full h-full"
-                />
+                <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
             </div>
         </Card>
     )
 }
 
-// Robot component without spotlight for use with page-wide spotlight
+// Robot component that only responds to mouse when pointer is over the robot frame
 export function SplineRobotNoSpotlight() {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <div className="w-full h-full relative overflow-hidden spline-robot-container">
-            <SplineScene
-                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+        <div
+            className="w-full h-full relative overflow-hidden spline-robot-container"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{
+                // Only allow pointer events when hovered over this specific frame
+                pointerEvents: 'auto'
+            }}
+        >
+            <div
                 className="w-full h-full"
-            />
+                style={{
+                    // Block pointer events to Spline when not hovered over this frame
+                    pointerEvents: isHovered ? 'auto' : 'none'
+                }}
+            >
+                <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
+            </div>
             <div className="absolute inset-0 pointer-events-none mask-alpha mask-x-from-[5%] mask-x-to-[95%]" />
         </div>
     );

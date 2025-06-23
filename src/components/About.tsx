@@ -59,7 +59,7 @@ const About: React.FC = () => {
     };
 
     return (
-        <section id="about" className="py-32 relative overflow-hidden" style={{ backgroundColor: '#010101' }} ref={containerRef}>
+        <section id="about" className="py-16 lg:py-32 relative overflow-hidden" style={{ backgroundColor: '#010101' }} ref={containerRef}>
             {/* Subtle Matrix Background */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-0 left-0 w-full h-full">
@@ -87,8 +87,8 @@ const About: React.FC = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                     {/* Content Side - Clean Terminal Style */}
                     <motion.div
@@ -98,26 +98,26 @@ const About: React.FC = () => {
                         className="order-2 lg:order-1"
                     >
                         {/* Terminal Header */}
-                        <motion.div variants={fadeUp} className="mb-8">
+                        <motion.div variants={fadeUp} className="mb-6 lg:mb-8">
                             <div className="bg-gray-900 rounded-t-lg border border-gray-700">
-                                <div className="flex items-center px-4 py-3 border-b border-gray-700">
-                                    <div className="flex space-x-2">
-                                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <div className="flex items-center px-3 sm:px-4 py-2 sm:py-3 border-b border-gray-700">
+                                    <div className="flex space-x-1 sm:space-x-2">
+                                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+                                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full"></div>
+                                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
                                     </div>
-                                    <div className="ml-4 text-gray-400 text-sm font-mono">
+                                    <div className="ml-3 sm:ml-4 text-gray-400 text-xs sm:text-sm font-mono">
                                         ~/portfolio/about-me
                                     </div>
                                 </div>
                             </div>
 
                             {/* Terminal Content */}
-                            <div className="bg-black rounded-b-lg border-l border-r border-b border-gray-700 p-6">
-                                <div className="text-green-400 mb-2 font-mono text-sm">
+                            <div className="bg-black rounded-b-lg border-l border-r border-b border-gray-700 p-4 sm:p-6">
+                                <div className="text-green-400 mb-2 font-mono text-xs sm:text-sm">
                                     <span className="text-blue-400">$</span> cat about.md
                                 </div>
-                                <div className="text-purple-400 mb-6 font-mono text-sm">
+                                <div className="text-purple-400 mb-4 sm:mb-6 font-mono text-xs sm:text-sm">
                                     <span className="text-gray-500"># </span>
                                     <Typewriter
                                         text={["ABOUT_HIMANSHU.MD", "DEVELOPER_PROFILE.JS", "STACK_OVERVIEW.TS"]}
@@ -129,51 +129,51 @@ const About: React.FC = () => {
                                 </div>
 
                                 {/* Clear, readable content */}
-                                <div className="space-y-6 text-gray-300 leading-relaxed">
+                                <div className="space-y-4 sm:space-y-6 text-gray-300 leading-relaxed">
                                     <div className="text-white">
-                                        <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
                                             Building the Future with
                                             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Code & Design</span>
                                         </h2>
                                     </div>
 
-                                    <p className="text-lg">
+                                    <p className="text-base sm:text-lg">
                                         I'm <strong className="text-white">Himanshu Kurapati</strong>—founder of
                                         <strong className="text-primary"> Astro Gamers</strong> and a developer who combines
                                         game-level polish with full-stack precision.
                                     </p>
 
-                                    <div className="bg-gray-900/50 rounded-lg p-4 border-l-4 border-primary">
-                                        <p className="text-gray-300">
+                                    <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-primary">
+                                        <p className="text-gray-300 text-sm sm:text-base">
                                             <strong className="text-secondary">Capgemini:</strong> Reduced Salesforce Lightning downtime by
                                             <strong className="text-green-400"> 15%</strong>, proving that careful engineering protects the bottom line.
                                         </p>
                                     </div>
 
-                                    <div className="bg-gray-900/50 rounded-lg p-4 border-l-4 border-secondary">
-                                        <p className="text-gray-300">
+                                    <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-secondary">
+                                        <p className="text-gray-300 text-sm sm:text-base">
                                             <strong className="text-primary">Game Development:</strong> Shipped
                                             <strong className="text-white"> Tesla Off-Road</strong> (100K+ downloads) and
                                             <strong className="text-white"> X-Blade</strong>—turning side projects into market success.
                                         </p>
                                     </div>
 
-                                    <div className="bg-gray-900/50 rounded-lg p-4 border-l-4 border-accent">
-                                        <p className="text-gray-300">
+                                    <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-accent">
+                                        <p className="text-gray-300 text-sm sm:text-base">
                                             <strong className="text-accent">Freelance:</strong> Delivered
                                             <strong className="text-green-400"> 70+ Unity gigs</strong> on Fiverr
                                             with a perfect <strong className="text-yellow-400">★★★★★</strong> rating.
                                         </p>
                                     </div>
 
-                                    <p className="text-lg">
+                                    <p className="text-base sm:text-lg">
                                         Latest project: <strong className="text-primary">Job Sculptor</strong>—an AI-powered
                                         job tracker built with <strong className="text-secondary">React Native Expo</strong>,
                                         <strong className="text-green-400"> Supabase</strong>, and <strong className="text-blue-400">n8n</strong>.
                                     </p>
                                 </div>
 
-                                <div className="mt-6 text-green-400 font-mono text-sm">
+                                <div className="mt-4 sm:mt-6 text-green-400 font-mono text-xs sm:text-sm">
                                     <span className="text-blue-400">$</span>
                                     <motion.span
                                         animate={{ opacity: [1, 0, 1] }}
@@ -194,13 +194,13 @@ const About: React.FC = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="relative">
+                        <div className="relative mx-4 sm:mx-0">
                             {/* Main Achievement Card */}
-                            <div className="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden min-h-[400px]">
+                            <div className="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden min-h-[350px] sm:min-h-[400px]">
                                 {/* Card Header */}
-                                <div className="bg-gray-800 px-6 py-4 border-b border-gray-700">
+                                <div className="bg-gray-800 px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-700">
                                     <div className="flex items-center justify-between">
-                                        <h3 className="text-white font-semibold text-lg">
+                                        <h3 className="text-white font-semibold text-base sm:text-lg">
                                             {achievements[currentCard].title}
                                         </h3>
                                         <div className="flex space-x-1">
@@ -208,7 +208,7 @@ const About: React.FC = () => {
                                                 <button
                                                     key={index}
                                                     onClick={() => handleDotClick(index)}
-                                                    className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 focus:outline-none ${index === currentCard
+                                                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 hover:scale-125 focus:outline-none ${index === currentCard
                                                         ? 'bg-primary shadow-lg shadow-primary/30'
                                                         : 'bg-gray-600 hover:bg-gray-500'
                                                         }`}
@@ -220,13 +220,13 @@ const About: React.FC = () => {
                                 </div>
 
                                 {/* Card Content */}
-                                <div className="p-6">
+                                <div className="p-4 sm:p-6">
                                     <motion.div
                                         key={currentCard}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className="space-y-6"
+                                        className="space-y-4 sm:space-y-6"
                                     >
                                         {achievements[currentCard].items.map((item, index) => (
                                             <motion.div
@@ -234,12 +234,12 @@ const About: React.FC = () => {
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: index * 0.1 }}
-                                                className="flex justify-between items-center p-4 bg-gray-800/50 rounded-lg border border-gray-700"
+                                                className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gray-800/50 rounded-lg border border-gray-700 space-y-1 sm:space-y-0"
                                             >
-                                                <span className="text-gray-400 font-medium">
+                                                <span className="text-gray-400 font-medium text-sm sm:text-base">
                                                     {item.label}
                                                 </span>
-                                                <span className={`font-bold text-lg ${item.color}`}>
+                                                <span className={`font-bold text-base sm:text-lg ${item.color}`}>
                                                     {item.value}
                                                 </span>
                                             </motion.div>
@@ -248,8 +248,8 @@ const About: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Project Icons - Simplified */}
-                            <div className="absolute -top-6 -right-6 flex space-x-2">
+                            {/* Project Icons - Responsive positioning */}
+                            <div className="absolute -top-4 sm:-top-6 -right-2 sm:-right-6 flex space-x-1 sm:space-x-2">
                                 {[
                                     { icon: astroIcon, name: "Astro", delay: 0.3 },
                                     { icon: teslaIcon, name: "Tesla", delay: 0.5 },
@@ -258,7 +258,7 @@ const About: React.FC = () => {
                                 ].map((project, index) => (
                                     <motion.div
                                         key={index}
-                                        className="w-10 h-10 bg-gray-800 rounded-lg border border-gray-600 p-2 backdrop-blur-sm"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-800 rounded-lg border border-gray-600 p-1.5 sm:p-2 backdrop-blur-sm"
                                         initial={{ opacity: 0, scale: 0, y: -20 }}
                                         animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0, y: -20 }}
                                         transition={{ delay: project.delay, type: "spring" }}
@@ -273,12 +273,12 @@ const About: React.FC = () => {
                                 ))}
                             </div>
 
-                            {/* Subtle Tech Icons */}
-                            <div className="absolute -bottom-4 -left-4 space-x-2 flex">
+                            {/* Subtle Tech Icons - Responsive positioning */}
+                            <div className="absolute -bottom-3 sm:-bottom-4 -left-2 sm:-left-4 space-x-1 sm:space-x-2 flex">
                                 {['React', 'Unity', 'TS', 'JS'].map((tech, index) => (
                                     <motion.div
                                         key={tech}
-                                        className="px-3 py-1 bg-gray-800/80 rounded-full border border-gray-600 text-xs font-mono text-gray-400"
+                                        className="px-2 sm:px-3 py-1 bg-gray-800/80 rounded-full border border-gray-600 text-xs font-mono text-gray-400"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                         transition={{ delay: 1 + index * 0.1 }}
@@ -289,9 +289,9 @@ const About: React.FC = () => {
                                 ))}
                             </div>
 
-                            {/* Subtle Background Elements */}
+                            {/* Subtle Background Elements - Hide on mobile to reduce clutter */}
                             <motion.div
-                                className="absolute top-1/4 -left-8 w-4 h-4 bg-primary/20 rounded-full"
+                                className="absolute top-1/4 -left-8 w-4 h-4 bg-primary/20 rounded-full hidden sm:block"
                                 animate={{
                                     scale: [1, 1.2, 1],
                                     opacity: [0.2, 0.4, 0.2],
@@ -303,7 +303,7 @@ const About: React.FC = () => {
                                 }}
                             />
                             <motion.div
-                                className="absolute bottom-1/4 -right-8 w-3 h-3 bg-secondary/20 rounded-full"
+                                className="absolute bottom-1/4 -right-8 w-3 h-3 bg-secondary/20 rounded-full hidden sm:block"
                                 animate={{
                                     scale: [1, 1.3, 1],
                                     opacity: [0.3, 0.5, 0.3],

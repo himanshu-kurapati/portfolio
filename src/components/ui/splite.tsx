@@ -3,13 +3,12 @@ const Spline = lazy(() => import('@splinetool/react-spline'))
 
 interface SplineSceneProps {
     scene: string
-    className?: string
 }
 
-export function SplineScene({ scene, className }: SplineSceneProps) {
+export function SplineScene({ scene }: SplineSceneProps) {
     const handleLoad = (app: any) => {
-        if (app && app.setGlobalEvents) {
-            app.setGlobalEvents(true); // Enables global mouse tracking
+        if (app?.setGlobalEvents) {
+            app.setGlobalEvents(false);
         }
     };
 
@@ -21,11 +20,7 @@ export function SplineScene({ scene, className }: SplineSceneProps) {
                 </div>
             }
         >
-            <Spline
-                scene={scene}
-                className={className}
-                onLoad={handleLoad}
-            />
+            <Spline scene={scene} onLoad={handleLoad} />
         </Suspense>
     )
 } 

@@ -166,6 +166,16 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, label {
   background: #6d48cc;
 } 
 
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * {
