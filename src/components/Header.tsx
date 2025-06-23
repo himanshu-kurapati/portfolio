@@ -61,15 +61,11 @@ const Header: React.FC = () => {
                         }`}>
                         {/* Logo */}
                         <motion.button
-                            className="flex items-center space-x-3"
+                            className="flex items-center"
                             onClick={() => navigate('/')}
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <div className={`bg-white rounded-lg flex items-center justify-center font-bold text-black text-sm shadow-lg transition-all duration-500 ${scrolled ? 'w-7 h-7' : 'w-8 h-8'
-                                }`}>
-                                N
-                            </div>
                             <span className={`font-bold text-white tracking-tight transition-all duration-500 ${scrolled ? 'text-lg' : 'text-xl'
                                 }`}>
                                 Himanshu Kurapati
