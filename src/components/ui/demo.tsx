@@ -91,6 +91,7 @@ export function SplineRobotNoSpotlight() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
+
         <div
             className="w-full h-full relative overflow-hidden spline-robot-container"
             onMouseEnter={() => setIsHovered(true)}
