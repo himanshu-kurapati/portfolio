@@ -52,7 +52,7 @@ const About: React.FC = () => {
             setCurrentCard((prev) => (prev + 1) % achievements.length);
         }, 6000);
         return () => clearInterval(interval);
-    }, []);
+    }, [achievements.length]);
 
     const handleDotClick = (index: number) => {
         setCurrentCard(index);
