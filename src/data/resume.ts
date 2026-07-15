@@ -1,15 +1,15 @@
 export const experience = [
-    {
-        title: "Senior Analyst",
-        company: "Capgemini",
-        period: "Aug 2022 – Dec 2023",
-        bullets: [
-            "Customized Apex triggers, Lightning Web Components and complex role hierarchies that cut client downtime by 15% during Classic-to-Lightning migration",
-            "Built custom Salesforce solutions (Apex, LWC) to streamline client ops",
-            "Led Lightning migration, cutting downtime 15%",
-            "Owned security, roles & integrations across orgs"
-        ]
-    },
+    // {
+    //     title: "Senior Analyst",
+    //     company: "Capgemini",
+    //     period: "Aug 2022 – Dec 2023",
+    //     bullets: [
+    //         "Customized Apex triggers, Lightning Web Components and complex role hierarchies that cut client downtime by 15% during Classic-to-Lightning migration",
+    //         "Built custom Salesforce solutions (Apex, LWC) to streamline client ops",
+    //         "Led Lightning migration, cutting downtime 15%",
+    //         "Owned security, roles & integrations across orgs"
+    //     ]
+    // },
     {
         title: "Founder / Lead Game Developer",
         company: "Astro (Indie Mobile-Game Studio)",
@@ -120,9 +120,9 @@ export const projects = [
 export const professionalProfile = {
     name: "Himanshu Kurapati",
     title: "Game Developer, App Developer, Full-Stack Developer",
-    bio: "Himanshu Kurapati is a Salesforce-trained full-stack developer who has shipped production code for enterprise clients at Capgemini, delivered 70-plus freelance Unity contracts, and built mobile, web, and game products that have reached more than 100,000 end-users. His toolbox spans Java, Python, C#, React Native, Firebase, Supabase, and the entire Salesforce Lightning stack, and he blends that technical range with a design-first mindset honed through daily work in Figma and Adobe CC.",
+    // bio: "Himanshu Kurapati is a Salesforce-trained full-stack developer who has shipped production code for enterprise clients at Capgemini, delivered 70-plus freelance Unity contracts, and built mobile, web, and game products that have reached more than 100,000 end-users. His toolbox spans Java, Python, C#, React Native, Firebase, Supabase, and the entire Salesforce Lightning stack, and he blends that technical range with a design-first mindset honed through daily work in Figma and Adobe CC.",
     highlights: [
-        "Enterprise impact at Capgemini with 15% downtime reduction during Classic-to-Lightning migration",
+        // "Enterprise impact at Capgemini with 15% downtime reduction during Classic-to-Lightning migration",
         "Top-rated Fiverr Unity studio with perfect 5-star average across 70 projects",
         "Products reaching 100,000+ end-users across mobile, web, and gaming platforms",
         "Design-first mindset with daily Figma and Adobe CC experience"

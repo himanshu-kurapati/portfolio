@@ -13,14 +13,14 @@ const About: React.FC = () => {
     const [currentCard, setCurrentCard] = useState(0);
 
     const achievements = [
-        {
-            title: "Professional Experience",
-            items: [
-                { label: "Company", value: "Capgemini", color: "text-blue-400" },
-                { label: "Impact", value: "15% Downtime Reduction", color: "text-green-400" },
-                { label: "Focus", value: "Salesforce Lightning", color: "text-purple-400" }
-            ]
-        },
+        // {
+        //     title: "Professional Experience",
+        //     items: [
+        //         { label: "Company", value: "Capgemini", color: "text-blue-400" },
+        //         { label: "Impact", value: "15% Downtime Reduction", color: "text-green-400" },
+        //         { label: "Focus", value: "Salesforce Lightning", color: "text-purple-400" }
+        //     ]
+        // },
         {
             title: "Game Development",
             items: [
@@ -143,12 +143,12 @@ const About: React.FC = () => {
                                         game-level polish with full-stack precision.
                                     </p>
 
-                                    <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-primary">
+                                    {/* <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-primary">
                                         <p className="text-gray-300 text-sm sm:text-base">
                                             <strong className="text-secondary">Capgemini:</strong> Reduced Salesforce Lightning downtime by
                                             <strong className="text-green-400"> 15%</strong>, proving that careful engineering protects the bottom line.
                                         </p>
-                                    </div>
+                                    </div> */}
 
                                     <div className="bg-gray-900/50 rounded-lg p-3 sm:p-4 border-l-4 border-secondary">
                                         <p className="text-gray-300 text-sm sm:text-base">

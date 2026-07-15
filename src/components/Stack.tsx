@@ -62,10 +62,10 @@ const Stack: React.FC = () => {
     ];
 
     const experienceTable: ExperienceTableRow[] = [
-        { id: 1, company: "Capgemini", achievement: "15% Downtime Reduction", duration: "1 Year", impact: "HIGH" },
-        { id: 2, company: "Astro Gamers", achievement: "100K+ Game Downloads", duration: "2 Years", impact: "HIGH" },
-        { id: 3, company: "Fiverr", achievement: "70+ Projects Completed", duration: "3 Years", impact: "MEDIUM" },
-        { id: 4, company: "Personal", achievement: "AI Job Tracker App", duration: "6 Months", impact: "MEDIUM" }
+        // { id: 1, company: "Capgemini", achievement: "15% Downtime Reduction", duration: "1 Year", impact: "HIGH" },
+        { id: 1, company: "Astro Gamers", achievement: "100K+ Game Downloads", duration: "2 Years", impact: "HIGH" },
+        { id: 2, company: "Fiverr", achievement: "70+ Projects Completed", duration: "3 Years", impact: "MEDIUM" },
+        { id: 3, company: "Personal", achievement: "AI Job Tracker App", duration: "6 Months", impact: "MEDIUM" }
     ];
 
     const [tabs, setTabs] = useState<Tab[]>([
