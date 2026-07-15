@@ -10,10 +10,6 @@ import jobSculptorBanner from '../assets/images/projects/jobsculptor_banner.png'
 import teslaBanner from '../assets/images/projects/tesla_banner.jpg';
 import xbladeBanner from '../assets/images/projects/xblade_banner.jpg';
 
-// Import cursor images
-import mouseArrow from '../assets/images/icons/mouse_arrow.png';
-import mouseHand from '../assets/images/icons/mouse_hand.png';
-
 const Projects: React.FC = () => {
     const ref = useRef<HTMLElement>(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -114,8 +110,7 @@ const Projects: React.FC = () => {
     };
 
     // Window content elements for progressive loading
-    const getWindowElements = (index: number) => {
-        const project = projectItems[index];
+    const getWindowElements = (_index: number) => {
         return [
             'title',
             'subtitle',

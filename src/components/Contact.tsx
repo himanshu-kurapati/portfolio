@@ -1,8 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { useForm, ValidationError } from '@formspree/react';
-import { fadeUp, stagger } from '../motion.config';
-import { Send, User, Bot, CheckCircle2, Clock, Plus, Gift, Smile, Mic } from 'lucide-react';
+import { fadeUp } from '../motion.config';
+import { Send, User, Bot, Plus, Gift, Smile, Mic } from 'lucide-react';
 
 interface ChatMessage {
     id: string;
@@ -24,7 +23,6 @@ const Contact: React.FC = () => {
     const chatContainerRef = useRef<HTMLDivElement>(null);
     const chatEndRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, amount: 0.1 });
-    const [state, handleSubmit] = useForm("myzjdzry");
 
     // Start with empty messages - only load when user scrolls to section
     const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -33,9 +31,7 @@ const Contact: React.FC = () => {
     const [currentStep, setCurrentStep] = useState<'name' | 'email' | 'subject' | 'message' | 'complete'>('name');
     const [formData, setFormData] = useState<FormData>({ name: '', email: '', subject: '', message: '' });
     const [inputValue, setInputValue] = useState('');
-    const [isTyping, setIsTyping] = useState(false);
     const [showTyping, setShowTyping] = useState(false);
-    const [emailError, setEmailError] = useState('');
 
     // Auto scroll to bottom only within chat container (not page)
     useEffect(() => {
@@ -128,11 +124,9 @@ const Contact: React.FC = () => {
         // Email validation step
         if (currentStep === 'email') {
             if (!validateEmail(value)) {
-                setEmailError('Please enter a valid email address');
                 addBotMessage("That doesn't appear to be a valid email format. Could you please check and try again?", 1500);
                 return;
             }
-            setEmailError('');
         }
 
         // Update form data based on current step

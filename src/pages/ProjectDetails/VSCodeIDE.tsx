@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 import projectsData from '../../data/projects.json';
 import ScreenshotCarousel from '../../components/ui/screenshot-carousel';
@@ -61,22 +60,6 @@ const VSCodeIDE: React.FC<VSCodeIDEProps> = ({ selectedProjectId, keepExplorerOp
     const [showProcessingLine, setShowProcessingLine] = useState(false);
     const [hasShownMobileExplorer, setHasShownMobileExplorer] = useState(keepExplorerOpen);
     const [isMobile, setIsMobile] = useState(false);
-
-    // Navigation function similar to Header component
-    const handleNavClick = (sectionId: string) => {
-        // Navigate to home page first, then scroll to section
-        window.location.href = '/';
-        // Use setTimeout to ensure page loads before scrolling
-        setTimeout(() => {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
-            }
-        }, 100);
-    };
 
     useEffect(() => {
         if (selectedProjectId) {
@@ -192,17 +175,6 @@ const VSCodeIDE: React.FC<VSCodeIDEProps> = ({ selectedProjectId, keepExplorerOp
             setSelectedProject(project);
             setIsLoading(false);
         }, 300);
-    };
-
-    const renderStars = (rating: number) => {
-        return Array.from({ length: 5 }, (_, i) => (
-            <span
-                key={i}
-                className={`text-lg ${i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-600'}`}
-            >
-                ★
-            </span>
-        ));
     };
 
     const getTruncatedDescription = (description: string, maxLines: number = 3) => {

@@ -1,0 +1,101 @@
+01:22:43.180 Running build in Washington, D.C., USA (East) – iad1
+01:22:43.181 Build machine configuration: 2 cores, 8 GB
+01:22:43.377 Cloning github.com/himanshu-kurapati/portfolio (Branch: main, Commit: ccc332e)
+01:22:43.378 Previous build caches not available.
+01:22:44.179 Cloning completed: 801.000ms
+01:22:44.466 Running "vercel build"
+01:22:44.488 Vercel CLI 56.2.0
+01:22:45.157 Running "install" command: `npm install`...
+01:22:49.688 npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+01:22:49.942 npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+01:22:50.161 npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+01:22:50.188 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+01:22:50.281 npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+01:22:50.501 npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+01:22:50.502 npm warn deprecated
+01:22:50.502 npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+01:22:51.372 npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+01:22:51.707 npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+01:22:51.824 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+01:22:52.099 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+01:22:52.887 npm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+01:22:53.421 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+01:22:54.608 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+01:22:54.731 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+01:22:55.345 npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+01:22:55.346 npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+01:22:55.347 npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+01:22:55.347 npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+01:22:55.381 npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+01:22:56.938 npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+01:22:57.621 npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+01:23:07.083 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+01:23:17.705 
+01:23:17.705 added 1483 packages, and audited 1484 packages in 32s
+01:23:17.705 
+01:23:17.706 289 packages are looking for funding
+01:23:17.706   run `npm fund` for details
+01:23:17.901 
+01:23:17.901 60 vulnerabilities (13 low, 16 moderate, 28 high, 3 critical)
+01:23:17.902 
+01:23:17.902 To address issues that do not require attention, run:
+01:23:17.902   npm audit fix
+01:23:17.902 
+01:23:17.902 To address all issues (including breaking changes), run:
+01:23:17.902   npm audit fix --force
+01:23:17.902 
+01:23:17.903 Run `npm audit` for details.
+01:23:17.903 npm notice
+01:23:17.903 npm notice New major version of npm available! 10.9.7 -> 12.0.1
+01:23:17.904 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.1
+01:23:17.904 npm notice To update run: npm install -g npm@12.0.1
+01:23:17.904 npm notice
+01:23:18.249 
+01:23:18.249 > portfolio@0.1.0 build
+01:23:18.250 > react-scripts build
+01:23:18.250 
+01:23:19.438 Creating an optimized production build...
+01:23:19.554 Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
+01:23:19.555   npx update-browserslist-db@latest
+01:23:19.555   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+01:24:19.159 Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
+01:24:19.159   npx update-browserslist-db@latest
+01:24:19.160   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+01:24:21.016 
+01:24:21.017 Treating warnings as errors because process.env.CI = true.
+01:24:21.017 Most CI servers set it automatically.
+01:24:21.017 
+01:24:21.031 Failed to compile.
+01:24:21.031 
+01:24:21.036 [eslint] 
+01:24:21.039 src/components/Contact.tsx
+01:24:21.039   Line 3:19:   'ValidationError' is defined but never used        @typescript-eslint/no-unused-vars
+01:24:21.040   Line 4:18:   'stagger' is defined but never used                @typescript-eslint/no-unused-vars
+01:24:21.040   Line 5:27:   'CheckCircle2' is defined but never used           @typescript-eslint/no-unused-vars
+01:24:21.040   Line 5:41:   'Clock' is defined but never used                  @typescript-eslint/no-unused-vars
+01:24:21.040   Line 27:12:  'state' is assigned a value but never used         @typescript-eslint/no-unused-vars
+01:24:21.041   Line 27:19:  'handleSubmit' is assigned a value but never used  @typescript-eslint/no-unused-vars
+01:24:21.041   Line 36:12:  'isTyping' is assigned a value but never used      @typescript-eslint/no-unused-vars
+01:24:21.041   Line 36:22:  'setIsTyping' is assigned a value but never used   @typescript-eslint/no-unused-vars
+01:24:21.041   Line 38:12:  'emailError' is assigned a value but never used    @typescript-eslint/no-unused-vars
+01:24:21.041 
+01:24:21.042 src/components/Header.tsx
+01:24:21.042   Line 3:10:  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+01:24:21.042 
+01:24:21.042 src/components/Projects.tsx
+01:24:21.042   Line 14:8:    'mouseArrow' is defined but never used        @typescript-eslint/no-unused-vars
+01:24:21.042   Line 15:8:    'mouseHand' is defined but never used         @typescript-eslint/no-unused-vars
+01:24:21.043   Line 118:15:  'project' is assigned a value but never used  @typescript-eslint/no-unused-vars
+01:24:21.045 
+01:24:21.045 src/components/ui/card.tsx
+01:24:21.046   Line 36:5:  Headings must have content and the content must be accessible by a screen reader  jsx-a11y/heading-has-content
+01:24:21.046 
+01:24:21.052 src/components/ui/typewriter.tsx
+01:24:21.053   Line 54:11:  The 'texts' conditional could make the dependencies of useEffect Hook (at line 98) change on every render. To fix this, wrap the initialization of 'texts' in its own useMemo() Hook  react-hooks/exhaustive-deps
+01:24:21.053 
+01:24:21.053 src/pages/ProjectDetails/VSCodeIDE.tsx
+01:24:21.053   Line 3:10:    'Link' is defined but never used                     @typescript-eslint/no-unused-vars
+01:24:21.054   Line 66:11:   'handleNavClick' is assigned a value but never used  @typescript-eslint/no-unused-vars
+01:24:21.054   Line 197:11:  'renderStars' is assigned a value but never used     @typescript-eslint/no-unused-vars
+01:24:21.054 
+01:24:21.054 
